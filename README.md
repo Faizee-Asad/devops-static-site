@@ -22,7 +22,9 @@ A simple static HTML page is containerized using Docker with an Nginx base image
 ---
 
 ## 📁 Project Structure
-. ├── index.html         # Static website content ├── Dockerfile         # Defines the container image using Nginx └── README.md          # Project documentation
+├── index.html         # Static website content 
+├── Dockerfile         # Defines the container image using Nginx 
+└── README.md          # Project documentation
 
 ---
 
@@ -67,7 +69,6 @@ pipeline {
 
 FROM nginx:alpine
 COPY ./index.html /usr/share/nginx/html/index.html
-EXPOSE 80
 
 
 ---
@@ -118,16 +119,3 @@ http://<your-ec2-ip>:8080
 
 ---
 
----
-
-## ✅ Next Steps:
-
-- Commit and push this `README.md` to your GitHub repo:
-
-bash
-nano README.md
-# Paste the content above, save and exit
-
-git add README.md
-git commit -m "Added full project README"
-git push origin master
